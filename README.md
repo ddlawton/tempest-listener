@@ -20,7 +20,7 @@ Ideal for running 24/7 on a **TrueNAS SCALE** box or any Linux system with Docke
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/yourname/tempest-listener.git
+git clone https://github.com/ddlawton/tempest-listener.git
 cd tempest-listener
 ```
 
