@@ -20,7 +20,7 @@ Ideal for running 24/7 on a **TrueNAS SCALE** box or any Linux system with Docke
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/yourname/tempest-listener.git
+git clone https://github.com/ddlawton/tempest-listener.git
 cd tempest-listener
 ```
 
@@ -62,6 +62,30 @@ Saved obs_st: timestamp=1721179196, temp=22.9, ...
 | `make clean`   | Delete the Docker image              |
 | `make restart` | Restart the container                |
 
+
+## Managing the Container with Shell Script
+
+If you don't have `make` installed (like on TrueNAS SCALE), you can use the included `tempest_control.sh` script to manage the Docker container.
+
+### Usage
+
+Make the script executable:
+
+```bash
+chmod +x tempest_control.sh
+```
+
+Then run the commands like:
+
+```bash 
+./tempest_control.sh build    # Build the Docker image
+./tempest_control.sh run      # Run the container in detached mode
+./tempest_control.sh logs     # View live container logs
+./tempest_control.sh stop     # Stop the container
+./tempest_control.sh rm       # Remove the container
+```
+
+This script provides a simple way to build, run, and manage your Tempest listener container without requiring make.
 
 ## Requirements
 
